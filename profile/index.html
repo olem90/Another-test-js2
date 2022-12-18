@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/dist/css/main.css">
+    <title>Profile</title>
+</head>
+<body class="bg-light">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark text-light">
+            <div class="container-fluid">
+              <a class="navbar-brand text-light fs-2" href="#">Social App</a>
+              <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Expand Navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item active ms-4  fs-5">
+                        <a class="nav-link text-light ms-4" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item ms-sm-5 fs-5">
+                        <a class="thumbnail nav-link text-white" href="profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item ms-sm-5 fs-5 justify-content-end">
+                        <a class="nav-link text-white" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item ms-sm-5 fs-5 justify-content-end">
+                        <a class="nav-link text-white" href="/src/signup.html">Sign Up</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <div class="container profile-container mt-5">
+        <div class="row">
+            
+                <div class="left-col col-md-6 col-lg-5 col-xxl-4 col-xl-4 col-sm-12 d-flex flex-column ms-md-0 ms-md-0">
+                    <div class="profile-info-and-img container d-flex flex-md-column flex-column flex-sm-row">
+                       <div class="container d-flex flex-column justify-content-center align-items-center">
+                           <img class="profile-img w-75 ms-sm-1 ms-md-0" src="/src/images/post-image-7.jpg" alt="">
+                           
+                            <span class="fs-4">Peter Griffin</span>
+
+                          
+                           
+                        </div>
+                        <div class="profile-info-container container d-flex flex-column mb-4 w-auto">
+                            <div class="container d-flex flex-column">
+                                <span class="profile-info mt-2"><b class="fw-semibold">Status:</b> In a relationship</span>
+                                <span class="profile-info"><b class="fw-semibold">Date of birth:</b>  28.06.90</span>
+                                <span class="profile-info"><b class="fw-semibold">Nationality:</b> Irish</span>
+                                <span class="profile-info"><b class="fw-semibold">City:</b> Dublin</span>
+                                <span class="profile-info"><b class="fw-semibold">Email:</b> petergriffin@gmail.com</span>
+                                <span class="profile-info"><b class="fw-semibold">Phone:</b> +3344562150</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container contacts d-flex flex-column w-75 shadow mt-sm-5 ">
+                        <p class="fw-semibold mt-4 text-center">Contacts</p>
+                        <div class="contacts-images-row-1 container d-flex justify-content-center">
+                            <div class="container d-flex flex-column justify-content-center align-items-center">
+                                <img class="rounded-2" src="/src/images/post-image-6.jpg" alt="">
+                                <span class="">Bella</span>
+                            </div>
+                            <div class="container d-flex flex-column align-items-center">
+                                <img class="rounded-2" src="/src/images/post-image-1.jpg" alt="">
+                                <span class="">Geir</span>
+                            </div>
+                            <div class="container d-flex flex-column align-items-center">
+                                <img class="rounded-2" src="/src/images/post-image-3.jpg" alt="">
+                                <span class="">Jenny</span>
+                            </div>
+                        </div>
+                        <div class="contacts-images-row-2 container d-flex flex-row my-3 justify-content-center">
+                            <div class="container d-flex flex-column justify-content-center align-items-center">
+                                <img class="rounded-2" src="/src/images/post-image-2.jpg" alt="">
+                                <span class="flex-nowrap">Mia</span>
+                            </div>
+                            <div class="container d-flex flex-column align-items-center">
+                                <img class="rounded-2" src="/src/images/post-image-5.jpg" alt="">
+                                <span class="">Hector</span>
+                            </div>
+                            <div class="container d-flex flex-column align-items-center w-two">
+                                <img class="rounded-2" src="/src/images/post-image-4.jpg" alt="">
+                                <span class="">Thor</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-sm-11 col-md-6 col-lg-6 col-xxl-6 col-xl-6 border-2 ms-xxl-3 d-flex flex-column mt-sm-4 mt-md-0 mx-sm-auto">
+                    <div class="right-col-profile-container container d-flex flex-column">
+                        <form class="w-100 d-flex flex-column mx-auto mt-3 mt-md-0" action="">
+                            <textarea class="mx-auto w-100 h-50" name="" id="" cols="34" rows="10" placeholder="Write a post"></textarea>
+                            <button class="d-flex rounded-4 bg-primary w-25 h-100 border-0 mt-3 mb-3 text-white fw-semibold justify-content-center align-items-center">
+                                Publish
+                            </button>
+                        </form>
+                        
+                        <div class="container profile-post d-flex shadow p-3">
+                            <img class="profile-post-img me-3 mt-1 rounded-circle" src="/src/images/post-image-7.jpg" alt="">
+                            <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ad impedit 
+                                repudiandae minima itaque numquam voluptatem, commodi explicabo.</p>
+                                
+                        </div>
+                        <div class="container-fluid profile-post d-flex mt-3 shadow p-3">
+                            <img class="profile-post-img me-3 mt-1 rounded-circle" src="/src/images/post-image-7.jpg" alt="">
+                            <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, vitae? Laboriosam 
+                                odit quae veniam similique minima, doloribus voluptatem quibusdam quo!</p>
+                        </div>
+                        <div class="container profile-post d-flex mt-3 shadow p-3">
+                            <img class="profile-post-img me-3 mt-1 rounded-circle" src="/src/images/post-image-7.jpg" alt="">
+                            <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sunt vitae 
+                                error facere deserunt explicabo recusandae nulla incidunt? Neque et nobis culpa, 
+                                praesentium nihil recusandae!</p>
+                        </div>
+    
+                    </div>
+                    
+                    
+                </div>
+        </div>
+    </div>
+    
+    <footer>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script type="module" src="/src/js/index.mjs"></script>
+</body>
+</html>
