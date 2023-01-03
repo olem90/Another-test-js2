@@ -1,36 +1,49 @@
-
-
 export function postTemplate(postData) {
     const post = document.createElement("div");
+    const postOptions = document.createElement("div");
+    const editPost = document.createElement("a");
+    const deletePost = document.createElement("a");
     const title = document.createElement("strong");
     const body = document.createElement("p");
     const postImage = document.createElement("img");
     const postCard = document.createElement("div");
     const tags = document.createElement("span");
+    
     tags.classList.add("fs-6");
-    postCard.classList.add("home-posts");
-    postImage.classList.add("home-post-img");
+    postCard.classList.add("profile-posts");
+    postImage.classList.add("profile-posts-img");
     title.classList.add("fs-6");
-    body.classList.add("bg")
+    body.classList.add("bg");
+    postOptions.classList.add("w-100", "d-flex", "justify-content-end");
+    editPost.classList.add("justify-content-end", "me-2");
+    deletePost.classList.add("justify-content-end", "text-danger");
     title.innerText = postData.title;
     body.innerText = postData.body;
-    post.classList.add("shadow", "p-3", "my-3");
+    editPost.innerText = "Edit";
+    editPost.href = "/post/edit/index.html" + `?id=${postData.id}`;
+    post.classList.add("shadow", "p-3", "my-3", "d-flex", "flex-column");
+
     postCard.appendChild(post);
+    post.appendChild(postOptions);
+    postOptions.appendChild(editPost);
     post.appendChild(title);
     post.appendChild(body);
     post.appendChild(tags);
+   
+    if (postData.media) {
+        const img = document.createElement("img");
+        img.classList.add("profile-post-img");
+        img.src = postData.media;
+        img.alt = `Image from ${postData.title}`;
+        post.append(img);
+    }
     
     return post;
 }
 
-export function renderPostTemplate(postData, parent) {
-   // parent.innerHTML += postTemplateA(postData)
-   parent.append(postTemplate(postData))
-}
-
 export function renderPostTemplates(postDataList, parent) {
-    parent.append(...postDataList.map(postTemplateB))
-   
+    parent.append(...postDataList.map(postTemplate))
 }
 
 
+    

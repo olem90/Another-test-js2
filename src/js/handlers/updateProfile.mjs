@@ -1,0 +1,48 @@
+import { getProfile, updateProfile } from "../api/profiles/index.mjs";
+
+import { load } from "./storage/index.mjs";
+
+export async function updateProfileListener() {
+    const form =  document.querySelector("#editProfile");
+
+    if (form) {
+        const { name, email } = load("profile");
+        form.name.value = name;
+        form.email.value = email;
+
+        const button = form.querySelector("button");
+        button.disabled = true;
+
+        const profile = await getProfile(name);
+        
+        form.banner.value = profile.banner;
+        form.avatar.value = profile.avatar;
+       
+        button.disabled = false;
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            const profile = Object.fromEntries(formData.entries());
+           
+            console.log("updateProfileListener working");
+            console.log(profile);
+
+            profile.name = name;
+            profile.email = email;
+
+            //send to api
+            updateProfile(profile);
+
+             setTimeout(function routeHome() {
+                 {
+                    window.location.href = "/profile/index.html";
+                }
+                routeHome();
+            },1000);
+        })
+    }
+};
+
+       

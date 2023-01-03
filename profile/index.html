@@ -9,6 +9,7 @@
     <title>Profile</title>
 </head>
 <body class="bg-light">
+    
     <header>
         <nav class="navbar navbar-expand-lg bg-dark text-light">
             <div class="container-fluid">
@@ -22,13 +23,13 @@
                         <a class="nav-link text-light ms-4" href="index.html">Home</a>
                     </li>
                     <li class="nav-item ms-sm-5 fs-5">
-                        <a class="thumbnail nav-link text-white" href="profile.html">Profile</a>
+                        <a class="thumbnail nav-link text-white" href="/profile/index.html">Profile</a>
                     </li>
                     <li class="nav-item ms-sm-5 fs-5 justify-content-end">
-                        <a class="nav-link text-white" href="login.html">Login</a>
+                        <a class="nav-link text-white" href="/profile/login/index.html">Login</a>
                     </li>
                     <li class="nav-item ms-sm-5 fs-5 justify-content-end">
-                        <a class="nav-link text-white" href="/src/signup.html">Sign Up</a>
+                        <a class="nav-link text-white" href="/profile/register/index.html">Register</a>
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
@@ -39,28 +40,14 @@
             </div>
           </nav>
     </header>
+
     <div class="container profile-container mt-5">
         <div class="row">
             
                 <div class="left-col col-md-6 col-lg-5 col-xxl-4 col-xl-4 col-sm-12 d-flex flex-column ms-md-0 ms-md-0">
                     <div class="profile-info-and-img container d-flex flex-md-column flex-column flex-sm-row">
-                       <div class="container d-flex flex-column justify-content-center align-items-center">
-                           <img class="profile-img w-75 ms-sm-1 ms-md-0" src="/src/images/post-image-7.jpg" alt="">
-                           
-                            <span class="fs-4">Peter Griffin</span>
-
+                       <div class="container d-flex flex-column justify-content-center align-items-center" id="profileInfoCard">
                           
-                           
-                        </div>
-                        <div class="profile-info-container container d-flex flex-column mb-4 w-auto">
-                            <div class="container d-flex flex-column">
-                                <span class="profile-info mt-2"><b class="fw-semibold">Status:</b> In a relationship</span>
-                                <span class="profile-info"><b class="fw-semibold">Date of birth:</b>  28.06.90</span>
-                                <span class="profile-info"><b class="fw-semibold">Nationality:</b> Irish</span>
-                                <span class="profile-info"><b class="fw-semibold">City:</b> Dublin</span>
-                                <span class="profile-info"><b class="fw-semibold">Email:</b> petergriffin@gmail.com</span>
-                                <span class="profile-info"><b class="fw-semibold">Phone:</b> +3344562150</span>
-                            </div>
                         </div>
                     </div>
 
@@ -99,34 +86,31 @@
                 
                 <div class="col-sm-11 col-md-6 col-lg-6 col-xxl-6 col-xl-6 border-2 ms-xxl-3 d-flex flex-column mt-sm-4 mt-md-0 mx-sm-auto">
                     <div class="right-col-profile-container container d-flex flex-column">
-                        <form class="w-100 d-flex flex-column mx-auto mt-3 mt-md-0" action="">
-                            <textarea class="mx-auto w-100 h-50" name="" id="" cols="34" rows="10" placeholder="Write a post"></textarea>
-                            <button class="d-flex rounded-4 bg-primary w-25 h-100 border-0 mt-3 mb-3 text-white fw-semibold justify-content-center align-items-center">
-                                Publish
-                            </button>
+                        <form class="w-100 d-flex flex-column mx-auto mt-3 mt-md-5" id="createPost">
+                            <div class="form-group d-flex flex-column">
+                                <label for="">Title</label>
+                                <input class="form-control mb-2" type="text" name="title" required>
+                            </div>
+
+                            <div class="form-group d-flex flex-column">
+                                <label for="">Media</label>
+                                <input class="form-control mb-2" type="url" name="media">
+                            </div>
+    
+                            <div class="form-group d-flex flex-column">
+                                <label for="">Body</label>
+                                <textarea class="form-control mx-auto w-100 h-50" name="body" placeholder="Write a post" required ></textarea>
+                                <button class="d-flex rounded-4 w-25 bg-primary border-0 mt-3 text-white py-1 fw-semibold justify-content-center align-items-center" id="postBtn">
+                                    Publish
+                                </button>
+                            </div>
                         </form>
                         
-                        <div class="container profile-post d-flex shadow p-3">
-                            <img class="profile-post-img me-3 mt-1 rounded-circle" src="/src/images/post-image-7.jpg" alt="">
-                            <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ad impedit 
-                                repudiandae minima itaque numquam voluptatem, commodi explicabo.</p>
-                                
+                        <div class="container profile-posts d-flex flex-column mt-3 shadow p-3" id="profilePost">
+                            
                         </div>
-                        <div class="container-fluid profile-post d-flex mt-3 shadow p-3">
-                            <img class="profile-post-img me-3 mt-1 rounded-circle" src="/src/images/post-image-7.jpg" alt="">
-                            <p class="mt-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus, vitae? Laboriosam 
-                                odit quae veniam similique minima, doloribus voluptatem quibusdam quo!</p>
-                        </div>
-                        <div class="container profile-post d-flex mt-3 shadow p-3">
-                            <img class="profile-post-img me-3 mt-1 rounded-circle" src="/src/images/post-image-7.jpg" alt="">
-                            <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, sunt vitae 
-                                error facere deserunt explicabo recusandae nulla incidunt? Neque et nobis culpa, 
-                                praesentium nihil recusandae!</p>
-                        </div>
-    
+
                     </div>
-                    
-                    
                 </div>
         </div>
     </div>

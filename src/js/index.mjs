@@ -1,10 +1,29 @@
-import { registerFormListener } from "./handlers/register.mjs";
-import { loginFormListener } from "./handlers/login.mjs"
+import router from "./router.mjs";
+import * as postMethods from "./api/posts/index.mjs";
+import * as profileMethods from "./api/profiles/index.mjs";
+import * as templates from "./templates/index.mjs";
 
-const path = location.pathname;
+router();
 
- if (path === '/profile/login/index.html') {
-     loginFormListener();
- } else if (path === '/profile/register/index.html') {
-     registerFormListener();
+ const path = location.pathname;
+
+ if( path === "/profile/index.html") {
+     profilePostsTemplate();
+     profileInfoTemplate();
  }
+
+ async function profilePostsTemplate() {
+     const posts = await postMethods.getPosts();
+     const container = document.querySelector("#profilePost");
+     templates.renderPostTemplates(posts, container);
+ }
+
+ async function profileInfoTemplate() {
+     const profile = await profileMethods.getProfile('ole_marius90');
+     const profileContainer = document.querySelector("#profileInfoCard");
+     templates.renderProfileTemplate(profile, profileContainer);
+ }
+
+ 
+
+ 

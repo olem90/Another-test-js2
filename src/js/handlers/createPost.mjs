@@ -1,14 +1,19 @@
-import { login } from "../api/auth/login.mjs";
+import { createPost } from "../api/posts/create.mjs";
 
-export function loginFormListener() {
-    const form =  document.querySelector("#loginForm");
+
+
+export function createPostListener() {
+    const form =  document.querySelector("#createPost");
 
     if (form) {
         form.addEventListener("submit", (event) => {
             event.preventDefault();
             const form = event.target;
             const formData = new FormData(form);
-            const profile = Object.fromEntries(formData.entries());
+            const post = Object.fromEntries(formData.entries());
+           
+            //send to api
+            createPost(post);
 
             setTimeout(function routeHome() {
                 {
@@ -16,10 +21,7 @@ export function loginFormListener() {
                }
                routeHome();
            },1000);
-
-            console.log(profile);
-           
-            login (profile)
         })
     }
 };
+createPostListener();

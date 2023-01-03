@@ -16,4 +16,3 @@ export function registerFormListener() {
         })
     }
 }
-console.log("I am connected to register page");

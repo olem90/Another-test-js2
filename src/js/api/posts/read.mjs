@@ -5,9 +5,9 @@ const action = "/posts";
 
 export async function getPosts() {
 
-    const getPostURL = `${API_SOCIAL_URL}${action}`
+    const getPostsURL = `${API_SOCIAL_URL}${action}`
     
-    const response = await fetchWithToken( getPostURL )
+    const response = await fetchWithToken( getPostsURL )
     
     return await response.json();
 }
