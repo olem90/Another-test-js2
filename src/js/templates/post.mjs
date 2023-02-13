@@ -29,7 +29,7 @@ export function postTemplate(postData) {
     post.appendChild(title);
     post.appendChild(body);
     post.appendChild(tags);
-   
+    
     if (postData.media) {
         const img = document.createElement("img");
         img.classList.add("profile-post-img");

@@ -5,7 +5,7 @@ const action = "/posts";
 const method = "post";
 
 export async function createPost(postData) {
-    const createPostURL = API_SOCIAL_URL + action;
+    const createPostURL = API_SOCIAL_URL + action; 
     
     const response = await fetchWithToken( createPostURL, {
         method,
