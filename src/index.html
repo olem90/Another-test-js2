@@ -13,7 +13,7 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-dark text-light">
             <div class="container-fluid">
-              <a class="navbar-brand text-light fs-2" href="#">Social App</a>
+              <a class="navbar-brand text-light fs-2" href="/src/index.html">Social App</a>
               <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Expand Navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -33,7 +33,7 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchPosts">
                   <button class="btn btn-outline-light" type="submit">Search</button>
                 </form>
               </div>
@@ -63,7 +63,12 @@
                                 <label for="">Media</label>
                                 <input class="form-control mb-2" type="url" name="media">
                             </div>
-    
+
+                            <div class="form-group d-flex flex-column">
+                                <label for="">Tags</label>
+                                <input class="form-control mb-2" type="text" name="tags">
+                            </div>
+
                             <div class="form-group d-flex flex-column">
                                 <label for="">Body</label>
                                 <textarea class="form-control mx-auto w-100 h-50" name="body" placeholder="Write a post" required ></textarea>
@@ -73,7 +78,7 @@
                             </div>
                         </form>
                         </div>
-                        <div class="container profile-posts d-flex flex-column mt-3 shadow p-3" id="homePost"></div>
+                        <div class="container d-flex flex-column mt-3 shadow p-3" id="homePosts"></div>
                     </div>
                 </div>
         </div>

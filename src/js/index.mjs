@@ -10,6 +10,9 @@ router();
  if( path === "/profile/index.html") {
      profilePostsTemplate();
      profileInfoTemplate();
+ } 
+ if(path === "/src/index.html") {
+    homePostsTemplate();
  }
 
  async function profilePostsTemplate() {
@@ -23,7 +26,12 @@ router();
      const profileContainer = document.querySelector("#profileInfoCard");
      templates.renderProfileTemplate(profile, profileContainer);
  }
-
+ 
+ async function homePostsTemplate() {
+    const posts = await postMethods.getPosts();
+    const container = document.querySelector("#homePosts");
+    templates.renderPostTemplates(posts, container);
+}
  
 
  

@@ -21,14 +21,14 @@ export function postTemplate(postData) {
     body.innerText = postData.body;
     editPost.innerText = "Edit";
     editPost.href = "/post/edit/index.html" + `?id=${postData.id}`;
-    post.classList.add("shadow", "p-3", "my-3", "d-flex", "flex-column");
+    post.classList.add("shadow", "p-3", "my-3", "d-flex", "flex-column", "home-post");
+    tags.innerText = postData.tags;
 
     postCard.appendChild(post);
     post.appendChild(postOptions);
     postOptions.appendChild(editPost);
     post.appendChild(title);
     post.appendChild(body);
-    post.appendChild(tags);
     
     if (postData.media) {
         const img = document.createElement("img");
@@ -37,6 +37,8 @@ export function postTemplate(postData) {
         img.alt = `Image from ${postData.title}`;
         post.append(img);
     }
+
+    post.appendChild(tags);
     
     return post;
 }

@@ -1,6 +1,6 @@
 import { createPost } from "../api/posts/create.mjs";
 
-
+const path = location.pathname;
 
 export function createPostListener() {
     const form =  document.querySelector("#createPost");
@@ -17,8 +17,14 @@ export function createPostListener() {
 
             setTimeout(function routeHome() {
                 {
-                   window.location.href = "/profile/index.html";
+                if(path === "/profile/index.html") {
+                    window.location.href = "/profile/index.html";
+                } 
+                if(path === "/src/index.html") {
+                    window.location.href = "/src/index.html";
+                }
                }
+               
                routeHome();
            },1000);
         })

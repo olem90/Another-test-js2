@@ -13,8 +13,8 @@ export async function updatePostListener() {
         const post = await getPost(id);
 
         form.title.value = post.title;
-        //form.tags.value = post.tags;
         form.media.value = post.media;
+        form.tags.value = post.tags;
         form.body.value = post.body;
 
         button.disabled = false;
@@ -31,9 +31,11 @@ export async function updatePostListener() {
             //send to api
             updatePost(post);
 
+            
+            
             setTimeout(function routeHome() {
                  {
-                    window.location.href = "/profile/index.html";
+                    window.location.href = "/src/index.html";
                 }
                 routeHome();
             },1000);
