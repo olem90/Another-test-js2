@@ -12,7 +12,7 @@ export function loginFormListener() {
 
             setTimeout(function routeHome() {
                 {
-                   window.location.href = "/profile/index.html";
+                   window.location.href = "/src/index.html";
                }
                routeHome();
            },1000);

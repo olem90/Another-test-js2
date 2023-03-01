@@ -4,7 +4,7 @@ export function postTemplate(postData) {
     const editPost = document.createElement("a");
     const deletePost = document.createElement("a");
     const title = document.createElement("strong");
-    const body = document.createElement("p");
+    const body = document.createElement("span");
     const postImage = document.createElement("img");
     const postCard = document.createElement("div");
     const tags = document.createElement("span");
@@ -13,7 +13,7 @@ export function postTemplate(postData) {
     postCard.classList.add("profile-posts");
     postImage.classList.add("profile-posts-img");
     title.classList.add("fs-6");
-    body.classList.add("bg");
+    body.classList.add("text-wrap");
     postOptions.classList.add("w-100", "d-flex", "justify-content-end");
     editPost.classList.add("justify-content-end", "me-2");
     deletePost.classList.add("justify-content-end", "text-danger");

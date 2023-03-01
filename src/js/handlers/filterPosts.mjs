@@ -1,27 +1,20 @@
-const search = document.querySelector("#searchPosts");
+/*import { getPosts } from "../api/posts/read.mjs";
 
-export function filterPosts() {
-    let filterValue = search.value.toLowerCase();
+const searchBar = document.querySelector("#searchPosts").value.toLowerCase();
 
-    const posts = document.querySelectorAll(".home-post");
-    posts.forEach(post => {
-        console.log(post.querySelector("strong").innerText.toLowerCase().includes(filterValue) 
-        ? post.style.display = "none" 
-        : post.style.display = "")
-
+export async function filterPosts() {
+    
+    let filterValue = searchBar.value.toLowerCase();
+    const posts = await getPosts();
+    const postMatch = posts.filter((searchPost)=> {
+        searchPost.title.toLowerCase().includes(filterValue)
     })
-}
+    console.log(postMatch)
+    console.log(filterValue)
+    }
+
 
 // Filter for searching posts
-search.addEventListener('keyup', filterPosts);
+//searchBar.addEventListener('keyup', filterPosts);
 
-console.log("we are connected BABYYY");
-
-/*
-if(post.innerText.toLowerCase().indexOf(filterValue) > -1) {
-    post.style.display = "";
-} else {
-    post.style.display = "none";
-
-}
-*/
+console.log("we are connected BABYYY");*/
