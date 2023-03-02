@@ -14,9 +14,7 @@ export async function updatePostListener() {
 
         form.title.value = post.title;
         form.media.value = post.media;
-        form.tags.value = post.tags;
         form.body.value = post.body;
-
         button.disabled = false;
 
         form.addEventListener("submit", (event) => {
@@ -31,13 +29,15 @@ export async function updatePostListener() {
             //send to api
             updatePost(post);
 
-            
-            
-            setTimeout(function routeHome() {
-                 {
+            if (updatePost(post)) {
+                alert("Your post has been updated")
+            } 
+    
+             setTimeout(function routeHome() {
+                  {
                     window.location.href = "/src/index.html";
-                }
-                routeHome();
+                 }
+                    routeHome();
             },1000);
         })
     } 

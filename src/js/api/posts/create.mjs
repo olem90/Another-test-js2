@@ -10,9 +10,13 @@ export async function createPost(postData) {
     const response = await fetchWithToken( createPostURL, {
         method,
         body: JSON.stringify(postData)
+        
     })
+    
 
    return await response.json();
+
+   
 }
 
 

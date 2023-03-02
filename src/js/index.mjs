@@ -21,8 +21,8 @@ router();
      templates.renderPostTemplates(posts, container);
  }
 
- async function profileInfoTemplate() {
-     const profile = await profileMethods.getProfile('ole_marius90');
+ async function profileInfoTemplate(data) {
+     const profile = await profileMethods.getProfile("ole_marius90");
      const profileContainer = document.querySelector("#profileInfoCard");
      templates.renderProfileTemplate(profile, profileContainer);
  }
@@ -32,6 +32,3 @@ router();
     const container = document.querySelector("#homePosts");
     templates.renderPostTemplates(posts, container);
 }
- 
-
- 

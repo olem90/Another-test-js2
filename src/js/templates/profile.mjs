@@ -12,11 +12,9 @@ export function profileTemplate(profileData) {
     profileName.innerText = `${profileData.name}`;
     email.innerText = "Email: " + `${profileData.email}`;
 
-    
     profile.classList.add("bg");
     profileName.classList.add("d-flex", "justify-content-center", "fw-bold");
     editProfileBtn.classList.add("d-flex","justify-content-end");
-
 
     if (profileData.avatar) {
         profileImg.classList.add("w-100", "profile-post-img");
@@ -27,7 +25,6 @@ export function profileTemplate(profileData) {
     profile.appendChild(profileName);
     profile.appendChild(email);
     
-
     if (profileData.banner) {
         banner.classList.add("w-100", "profile-banner");
         banner.src = profileData.banner;
@@ -36,9 +33,6 @@ export function profileTemplate(profileData) {
 
     profile.appendChild(editProfileBtn);
    
-
-    
-    
     return profile;
 }
 
