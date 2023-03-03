@@ -36,7 +36,7 @@ export function profileTemplate(profileData) {
     return profile;
 }
 
-  export function renderProfileTemplate(profileData, parent) {
-      parent.append(profileTemplate(profileData))
+export function renderProfileTemplate(profileData, parent) {
+    parent.append(profileTemplate(profileData))
     };
  

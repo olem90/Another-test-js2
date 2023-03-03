@@ -14,21 +14,21 @@ router();
  if(path === "/src/index.html") {
     homePostsTemplate();
  }
+ 
 
- async function profilePostsTemplate() {
-     const posts = await postMethods.getPosts();
-     const container = document.querySelector("#profilePost");
-     templates.renderPostTemplates(posts, container);
- }
-
- async function profileInfoTemplate(data) {
+async function profilePostsTemplate() {
+    const posts = await postMethods.getPosts();
+    const profilePostContainer = document.querySelector("#profilePost");
+    templates.renderPostTemplates(posts, profilePostContainer); 
+}
+async function profileInfoTemplate() {
      const profile = await profileMethods.getProfile("ole_marius90");
      const profileContainer = document.querySelector("#profileInfoCard");
      templates.renderProfileTemplate(profile, profileContainer);
  }
- 
- async function homePostsTemplate() {
+async function homePostsTemplate() {
     const posts = await postMethods.getPosts();
     const container = document.querySelector("#homePosts");
     templates.renderPostTemplates(posts, container);
 }
+

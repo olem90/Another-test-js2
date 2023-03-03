@@ -29,10 +29,6 @@ export async function updatePostListener() {
             //send to api
             updatePost(post);
 
-            if (updatePost(post)) {
-                alert("Your post has been updated")
-            } 
-    
              setTimeout(function routeHome() {
                   {
                     window.location.href = "/src/index.html";
