@@ -6,20 +6,30 @@
   height: 200px;
   max-width: 100%;
 }
-
 .contacts img {
   width: 55px;
   height: 55px;
   object-fit: cover;
 }
-
 .home-post img {
   width: 200px;
   height: 200px;
 }
-
+.home-post {
+  word-wrap: break-word;
+}
 .nav-item:hover {
   text-decoration: underline;
+}
+.arrow-down {
+  width: 14px;
+  height: 14px;
+}
+.filterContainer {
+  white-space: nowrap;
+}
+.sortBy {
+  font-size: 15px;
 }
 
 form button {
@@ -28,6 +38,7 @@ form button {
 .profile-banner {
   max-height: 100px;
 }
+
 
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)

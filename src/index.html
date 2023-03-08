@@ -19,8 +19,8 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item active ms-4  fs-5">
-                        <a class="nav-link text-light ms-4" href="/src/index.html">Home</a>
+                    <li class="nav-item active ms-sm-5 fs-5">
+                        <a class="nav-link text-light" href="/src/index.html">Home</a>
                     </li>
                     <li class="nav-item ms-sm-5 fs-5">
                         <a class="thumbnail nav-link text-white" href="/profile/index.html">Profile</a>
@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xxl-6 col-xl-6 d-flex flex-column">
+                <div class="col-sm-10 col-md-8 col-lg-6 col-xxl-6 col-xl-6 d-flex flex-column">
                     <div class="home-container container d-flex flex-column shadow p-4">
                         <form class="d-flex flex-column" id="createPost">
                             <div class="form-group d-flex flex-column">
@@ -72,6 +72,19 @@
                                 </button>
                             </div>
                         </form>
+                        </div>
+                        <div class="container d-block ms-0 filterContainer border border-2  rounded-pill border-opacity-50 border-dark mt-3 w-auto">
+                            <b class="sortBy"> 
+                                Sort By:
+                            </b>
+                            <select class="dropDown btn-outline-light border border-0 bg bg-light bg-opacity-25" name="date" id="select">
+                                <option class="newDate" value="date">
+                                    Date newest to oldest
+                                </option>
+                                <option class="oldDate" value="date">
+                                    Date oldest to newest
+                                </option>
+                            </select>
                         </div>
                         <div class="container d-flex flex-column mt-3 shadow p-3" id="homePosts">
                         </div>

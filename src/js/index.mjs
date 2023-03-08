@@ -10,12 +10,12 @@ router();
  if( path === "/profile/index.html") {
      profilePostsTemplate();
      profileInfoTemplate();
+    
  } 
  if(path === "/src/index.html") {
     homePostsTemplate();
  }
  
-
 async function profilePostsTemplate() {
     const posts = await postMethods.getPosts();
     const profilePostContainer = document.querySelector("#profilePost");

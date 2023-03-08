@@ -4,16 +4,16 @@ export function postTemplate(postData) {
     const editPost = document.createElement("a");
     const deletePost = document.createElement("a");
     const title = document.createElement("strong");
-    const body = document.createElement("span");
+    const body = document.createElement("p");
     const postImage = document.createElement("img");
     const postCard = document.createElement("div");
     const tags = document.createElement("span");
     
     tags.classList.add("fs-6");
-    postCard.classList.add("profile-posts");
+    postCard.classList.add("w-100");
     postImage.classList.add("profile-posts-img");
     title.classList.add("fs-6");
-    body.classList.add("text-wrap");
+    body.classList.add("text-wrap", "w-100");
     postOptions.classList.add("w-100", "d-flex", "justify-content-end");
     editPost.classList.add("justify-content-end", "me-2");
     deletePost.classList.add("justify-content-end", "text-danger");
@@ -39,12 +39,13 @@ export function postTemplate(postData) {
     }
 
     post.appendChild(tags);
-    
+
     return post;
 }
-
 export function renderPostTemplates(postDataList, parent) {
-    parent.append(...postDataList.map(postTemplate))
+    parent.append(...postDataList.map(data => { 
+       return postTemplate(data)
+    }))
 }
 
 
