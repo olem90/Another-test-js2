@@ -7,10 +7,8 @@
      event.preventDefault();
      let filterValue = searchBar.value.toLowerCase();
      let posts = await getPosts();
-     posts.forEach((post)=> 
-     
-    
-    }
 
+ }
+     
  // Filter for searching posts
  searchBar.addEventListener('keyup', filterPosts);
