@@ -22,13 +22,14 @@ async function profilePostsTemplate() {
     templates.renderPostTemplates(posts, profilePostContainer); 
 }
 async function profileInfoTemplate() {
-     const profile = await profileMethods.getProfile("ole_marius90");
-     const profileContainer = document.querySelector("#profileInfoCard");
-     templates.renderProfileTemplate(profile, profileContainer);
+    const profile = await profileMethods.getProfile('ole_marius90');
+    const profileContainer = document.querySelector("#profileInfoCard");
+    templates.renderProfileTemplate(profile, profileContainer);
  }
 async function homePostsTemplate() {
     const posts = await postMethods.getPosts();
     const container = document.querySelector("#homePosts");
     templates.renderPostTemplates(posts, container);
 }
+
 

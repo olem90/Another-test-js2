@@ -26,7 +26,6 @@ export async function updateProfileListener() {
             const formData = new FormData(form);
             const profile = Object.fromEntries(formData.entries());
            
-            console.log("updateProfileListener working");
             console.log(profile);
 
             profile.name = name;
@@ -35,12 +34,12 @@ export async function updateProfileListener() {
             //send to api
             updateProfile(profile);
 
-             setTimeout(function routeHome() {
-                 {
+            setTimeout(function routeHome() {
+                {
                     window.location.href = "/profile/index.html";
                 }
                 routeHome();
-            },1000);
+            },500);
         })
     }
 };

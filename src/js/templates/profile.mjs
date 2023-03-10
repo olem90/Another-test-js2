@@ -13,8 +13,8 @@ export function profileTemplate(profileData) {
     email.innerText = "Email: " + `${profileData.email}`;
 
     profile.classList.add("bg");
-    profileName.classList.add("d-flex", "justify-content-center", "fw-bold");
-    editProfileBtn.classList.add("d-flex","justify-content-end");
+    profileName.classList.add("d-flex", "justify-content-center", "fw-bold", "fs-4");
+    editProfileBtn.classList.add("editProfile","d-flex", "mb-2", "ms-auto");
 
     if (profileData.avatar) {
         profileImg.classList.add("w-100", "profile-post-img");

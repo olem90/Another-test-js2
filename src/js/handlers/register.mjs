@@ -9,10 +9,18 @@ export function registerFormListener() {
             const form = event.target;
             const formData = new FormData(form);
             const profile = Object.fromEntries(formData.entries());
-            console.log(profile);
+            
+
+            setTimeout(function routeHome() {
+                {
+                   window.location.href = "/profile/index.html";
+               }
+               routeHome();
+           },1000);
     
             //send to api
            register(profile)
+           console.log(profile);
         })
     }
 }

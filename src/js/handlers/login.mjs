@@ -16,10 +16,8 @@ export function loginFormListener() {
                }
                routeHome();
            },1000);
-
-            console.log(profile);
            
-            login (profile)
+            login(profile);
         })
     }
 };
