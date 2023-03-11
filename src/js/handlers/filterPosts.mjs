@@ -6,7 +6,7 @@ const searchBar = document.querySelector("#searchPosts");
 const profilePostsContainer = document.querySelector("#homePosts")
 
 
-if( path === "/src/index.html") {
+if( path === "/feed/index.html") {
     searchBar.addEventListener('keyup', filterPosts);
 }
 

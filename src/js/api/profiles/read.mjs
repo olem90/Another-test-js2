@@ -8,7 +8,7 @@ export async function getProfiles() {
     const getProfilesURL = `${API_SOCIAL_URL}${action}`
     
     const response = await fetchWithToken( getProfilesURL )
-    
+
     return await response.json();
 }
 

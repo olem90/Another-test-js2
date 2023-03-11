@@ -31,7 +31,7 @@ export async function updatePostListener() {
 
              setTimeout(function routeHome() {
                   {
-                    window.location.href = "/src/index.html";
+                    window.location.href = "/feed/index.html";
                  }
                     routeHome();
             },1000);

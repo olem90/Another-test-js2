@@ -9,9 +9,8 @@ const SortPostsByNewest = document.querySelector(".newDate");
 const SortPostsByOldest = document.querySelector(".oldDate");
 
 /**
- * This function will sort posts from oldest to newest
- * 
- * @param {string} event posts sorted from oldest to newest
+ * This function will sort posts from oldest to newest and display them in the html
+ * @param {Array <object>} event An array of objects(posts) sorted from oldest to newest
  */
 export async function sortPostsByOldest(event) {
     event.preventDefault();
@@ -39,6 +38,12 @@ export async function sortPostsByNewest(event) {
         return 0;
     };
 
+    /**
+     * Sorting posts from newest to oldest
+     * @param {boolean} a 
+     * @param {number} b 
+     * @returns {number} returns the datestamp of posts from newest to oldest
+     */
     function byNewest(a, b) {
         const dateA = new Date (a.created);
         const dateB = new Date (b.created);
@@ -47,7 +52,7 @@ export async function sortPostsByNewest(event) {
         return 0;
     }; 
     
-    if (path === '/src/index.html') {
+    if (path === '/feed/index.html') {
         SortPostsByOldest.addEventListener('click', sortPostsByOldest);
         SortPostsByNewest.addEventListener('click', sortPostsByNewest);
     }

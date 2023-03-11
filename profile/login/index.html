@@ -16,14 +16,14 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-dark text-light">
             <div class="container-fluid">
-              <a class="navbar-brand text-light fs-2" href="/src//index.html">Social App</a>
+              <a class="navbar-brand text-light fs-2" href="/feed/index.html">Social App</a>
               <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-label="Expand Navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-4 mb-2 mb-lg-0">
                     <li class="nav-item active ms-2  fs-5">
-                        <a class="nav-link text-light" href="/src/index.html">Home</a>
+                        <a class="nav-link text-light" href="/feed/index.html">Home</a>
                     </li>
                     <li class="nav-item ms-2 fs-5">
                         <a class="thumbnail nav-link text-white" href="/profile/index.html">Profile</a>
@@ -50,11 +50,11 @@
                 <form class="d-flex flex-column shadow-lg p-4 mb-5 bg-body rounded fs-4 mt-5" id="loginForm" href="/profile/index.html">
                     <div class="form-group">
                         <label class="opacity-75 form-label" for="Email">Email</label>
-                        <input class="form-control opacity-75 border-top-0 border-start-0 rounded-0 border-end-0 border-secondary" name="email" type="email" placeholder="Type your email" id="email">
+                        <input class="form-control opacity-75 border-top-0 border-start-0 rounded-0 border-end-0 border-secondary" name="email" type="email" placeholder="Type your email" id="email" required pattern="^[\w\-.]+@(stud.)?noroff.no$" title="Only @(stud.)noroff.no domains are allowed to register">
                     </div>
                     <div class="form-group">
                         <label class="opacity-75 mt-3" for="Password">Password</label>
-                        <input class="form-control opacity-75 border-top-0 border-start-0 rounded-0 border-end-0 border-secondary" name="password" type="password" placeholder="Type your password" required minlength="8">
+                        <input class="passwordInput form-control opacity-75 border-top-0 border-start-0 rounded-0 border-end-0 border-secondary" name="password" type="password" placeholder="Type your password" required minlength="8">
                     </div>
                     <span class="forgot-pw text-end mt-1 fs-5">
                         <a href="">Forgot password?</a>
