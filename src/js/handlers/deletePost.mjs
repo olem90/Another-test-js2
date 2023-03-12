@@ -10,15 +10,16 @@ import { getPost, removePost } from "../api/posts/index.mjs";
             removePostBtn.addEventListener("click", (event) => {
                 post.id = id;
                 
-                removePost(id);
+                //Send to API
+                if (removePost) {
+                    removePost(id);
 
-                setTimeout(function routeHome() {
+                    setTimeout(function routeHome() {
                     {
-                       window.location.href = "/profile/index.html";
-                   }
-                   routeHome();
-               },1000);
-            })
-        
+                        window.location.replace("/feed/index.html");               
+                    }          
+                    },1000);               
+                }                          
+            })      
     };
    

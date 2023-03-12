@@ -5,8 +5,8 @@ const path = location.pathname;
 
 // Filter posts by date with drop down menu
 const homePostsContainer = document.querySelector("#homePosts");
-const SortPostsByNewest = document.querySelector(".newDate");
-const SortPostsByOldest = document.querySelector(".oldDate");
+const sortByNewestOption = document.querySelector("#newDate");
+const sortByOldestOption = document.querySelector("#oldDate") ;
 
 /**
  * This function will sort posts from oldest to newest and display them in the html
@@ -18,8 +18,8 @@ export async function sortPostsByOldest(event) {
     const sortedFromOldest = posts.sort(byOldest);
 
     homePostsContainer.innerHTML = "";    
-    templates.renderPostTemplates( sortedFromOldest, homePostsContainer ) 
-    }
+    templates.renderPostTemplates( sortedFromOldest, homePostsContainer );
+    };
 
 export async function sortPostsByNewest(event) {
     event.preventDefault();
@@ -27,8 +27,8 @@ export async function sortPostsByNewest(event) {
     const sortedFromNewest = posts.sort(byNewest);
         
     homePostsContainer.innerHTML = "";    
-    templates.renderPostTemplates( sortedFromNewest, homePostsContainer ) 
-    }
+    templates.renderPostTemplates( sortedFromNewest, homePostsContainer ) ;
+    };
 
     function byOldest(a, b) {
         const dateA = new Date (a.created);
@@ -40,7 +40,7 @@ export async function sortPostsByNewest(event) {
 
     /**
      * Sorting posts from newest to oldest
-     * @param {boolean} a 
+     * @param {number} a 
      * @param {number} b 
      * @returns {number} returns the datestamp of posts from newest to oldest
      */
@@ -52,8 +52,8 @@ export async function sortPostsByNewest(event) {
         return 0;
     }; 
     
-    if (path === '/feed/index.html') {
-        SortPostsByOldest.addEventListener('click', sortPostsByOldest);
-        SortPostsByNewest.addEventListener('click', sortPostsByNewest);
-    }
-   
+    if ( path === "/feed/index.html" ) {
+        sortByOldestOption.addEventListener('click', sortPostsByOldest);
+        sortByNewestOption.addEventListener('click', sortPostsByNewest);
+    };
+

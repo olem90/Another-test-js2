@@ -16,5 +16,14 @@ export async function updateProfile(profileData) {
         body: JSON.stringify(profileData)
     })
     
+    function updateProfileResponse () {
+        if (response.ok) {
+            alert("Profile has been updated");
+        } else {
+            alert("Oooops, there seems like an error has occured. Try again");
+        }
+    } 
+    updateProfileResponse();
+
     return await response.json();
 }

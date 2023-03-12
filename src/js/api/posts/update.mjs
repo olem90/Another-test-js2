@@ -15,6 +15,15 @@ export async function updatePost(postData) {
         method,
         body: JSON.stringify(postData)
     })
+
+    function updatePostResponse () {
+        if (response.ok) {
+            alert("Post has been updated");
+        } else {
+            alert("You cannot update other users posts");
+        }
+    } 
+    updatePostResponse();
     
     return await response.json();
 }

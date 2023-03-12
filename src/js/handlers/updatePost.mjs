@@ -24,17 +24,16 @@ export async function updatePostListener() {
             const post = Object.fromEntries(formData.entries());
             post.id = id;
            
-            console.log("updatePostListener working");
-            console.log(post);
             //send to api
-            updatePost(post);
+            if ( updatePost ) {
+                updatePost(post);
 
-             setTimeout(function routeHome() {
-                  {
-                    window.location.href = "/feed/index.html";
-                 }
-                    routeHome();
-            },1000);
+                setTimeout(function routeBack() {
+                {
+                    window.location.replace("/feed/index.html");
+                }
+            },1000);          
+            }                
         })
     } 
 };

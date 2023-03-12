@@ -3,12 +3,9 @@ import * as templates from "../templates/index.mjs";
 
 const path = location.pathname;
 const searchBar = document.querySelector("#searchPosts");
-const profilePostsContainer = document.querySelector("#homePosts")
+const homePostsContainer = document.querySelector("#homePosts")
 
 
-if( path === "/feed/index.html") {
-    searchBar.addEventListener('keyup', filterPosts);
-}
 
 export async function filterPosts(event) {
     event.preventDefault();
@@ -17,13 +14,18 @@ export async function filterPosts(event) {
     
     const filteredPosts = posts.filter(
         (filteredPost) => 
-        filteredPost.body.toLowerCase().includes(filterValue) ||
+              
         filteredPost.title.toLowerCase().includes(filterValue)     
-    )
+    );
+   
+    homePostsContainer.innerHTML = "";    
+    templates.renderPostTemplates( filteredPosts, homePostsContainer )     
+    };
+    
 
-    profilePostsContainer.innerHTML = "";    
-    templates.renderPostTemplates( filteredPosts, profilePostsContainer )     
-    }
+    if( path === "/feed/index.html") {
+        searchBar.addEventListener('keyup', filterPosts);
+    };
 
 
 

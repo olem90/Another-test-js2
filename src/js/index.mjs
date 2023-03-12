@@ -17,22 +17,22 @@ const profileName = storage.load("profile");
  } 
  if(path === "/feed/index.html") {
     homePostsTemplate();
- }
+ };
 
 async function profilePostsTemplate() {
     const posts = await postMethods.getPosts();
     const profilePostContainer = document.querySelector("#profilePost");
     templates.renderPostTemplates(posts, profilePostContainer); 
-}
+};
 async function profileInfoTemplate() {
     const profile = await profileMethods.getProfile(profileName.name);
     const profileContainer = document.querySelector("#profileInfoCard");
     templates.renderProfileTemplate(profile, profileContainer);
- }
+ };
 async function homePostsTemplate() {
     const posts = await postMethods.getPosts();
     const container = document.querySelector("#homePosts");
     templates.renderPostTemplates(posts, container);
-}
+};
 
 

@@ -14,6 +14,16 @@ export async function removePost(id) {
     const response = await fetchWithToken( removePostURL, {
         method
     })
+
+    function deletePostResponse() {
+        if (response.ok) {
+            alert("Post has been deleted");          
+        } else {
+            alert("You cannot delete other users posts");
+        }
+    } ;
     
+    deletePostResponse();
+
     return await response.json();
 }

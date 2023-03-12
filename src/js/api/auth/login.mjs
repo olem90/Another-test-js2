@@ -23,20 +23,20 @@ export async function login(profile) {
 
     storage.save("profile", user);
 
-    function incorrectData(){
+    function loginData(){
         if (response.ok) {
             alert("You are now logged in");
             
             setTimeout(function routeHome() {
                 {
-                   window.location.href = "/profile/index.html";
+                    window.location.replace("/feed/index.html");
                }
-               routeHome();
+               
            },1000);
  
         } else {
             alert("Incorrect email or password")
         }
     }
-    incorrectData();
+    loginData();
 }

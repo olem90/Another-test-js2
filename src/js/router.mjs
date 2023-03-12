@@ -21,10 +21,12 @@ switch (path) {
         listeners.removePostListener()
         break;
     case '/feed/index.html':
-        listeners.createPostListener()
-        break;
+        listeners.createPostListener();
     case '/profile/edit/index.html':
         listeners.updateProfileListener()
         break;
 }
+
+
+
 

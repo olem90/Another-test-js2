@@ -25,8 +25,6 @@ export async function updateProfileListener() {
             const form = event.target;
             const formData = new FormData(form);
             const profile = Object.fromEntries(formData.entries());
-           
-            console.log(profile);
 
             profile.name = name;
             profile.email = email;
@@ -36,10 +34,9 @@ export async function updateProfileListener() {
 
             setTimeout(function routeHome() {
                 {
-                    window.location.href = "/profile/index.html";
+                    window.location.replace("/profile/index.html");
                 }
-                routeHome();
-            },500);
+            },1000);
         })
     }
 };

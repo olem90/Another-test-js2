@@ -11,6 +11,10 @@
   object-fit: cover;
 }
 
+.home-post {
+  word-wrap: break-word;
+}
+
 .home-post img {
   max-width: 200px;
   max-height: 200px;
