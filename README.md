@@ -10,6 +10,7 @@
 
     1. Open with Github desktop
     2. In Github Desktop open the project with your code editor.
+    
 
 Thats it. Now the project should be pulled to your code editor.
 
