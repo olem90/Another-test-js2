@@ -13,12 +13,12 @@ export function registerFormListener() {
 
             
             
-            setTimeout(function routeHome() {
-            {
-                window.location.href = "/profile/index.html";
-            }
-            routeHome();
-            },1000);
+            // setTimeout(function routeHome() {
+            // {
+            //     window.location.href = "/profile/index.html";
+            // }
+            // routeHome();
+            // },1000);
         
             //send to api
            if (register(profile)) {

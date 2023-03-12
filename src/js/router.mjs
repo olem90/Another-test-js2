@@ -13,11 +13,14 @@ switch (path) {
     case '/profile/register/index.html':
         listeners.registerFormListener()
         break;
+    case '/profile/index.html':
+        listeners.createPostListener()
+        break;
     case '/post/edit/index.html':
         listeners.updatePostListener()
         listeners.removePostListener()
         break;
-    case '/post/create/index.html':
+    case '/feed/index.html':
         listeners.createPostListener()
         break;
     case '/profile/edit/index.html':

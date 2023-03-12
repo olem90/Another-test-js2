@@ -9,19 +9,7 @@ export function loginFormListener() {
             const form = event.target;
             const formData = new FormData(form);
             const profile = Object.fromEntries(formData.entries());
-
-            {
-                if(login){
-                    login(profile);
-                    setTimeout(function routeHome() {
-                        {
-                            window.location.href = "/feed/index.html";
-                        }
-                        routeHome();
-                    },500);
-                }
-                
-            }  
+            login(profile);
         })
     }
 };

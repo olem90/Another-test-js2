@@ -56,6 +56,4 @@ export async function sortPostsByNewest(event) {
         SortPostsByOldest.addEventListener('click', sortPostsByOldest);
         SortPostsByNewest.addEventListener('click', sortPostsByNewest);
     }
-     
-
    

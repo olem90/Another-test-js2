@@ -1,10 +1,8 @@
 import { createPost } from "../api/posts/create.mjs";
 
-const path = location.pathname;
-
 export function createPostListener() {
     const form =  document.querySelector("#createPost");
-
+    console.log("yoo")
     if (form) {
         form.addEventListener("submit", (event) => {
             event.preventDefault();
@@ -14,20 +12,17 @@ export function createPostListener() {
            
             //send to api
             createPost(post);
-
-            setTimeout(function routeHome() {
+            console.log(post)
+            
+            setTimeout(function refreshPage() {
                 {
-                if(path === "/profile/index.html") {
-                    window.location.href = "/profile/index.html";
-                } 
-                if(path === "/src/index.html") {
-                    window.location.href = "/src/index.html";
-                }
+                  location.reload();
                }
                
-               routeHome();
-           },1000);
+            },3000);
+            refreshPage();
+
         })
     }
 };
-createPostListener();
+

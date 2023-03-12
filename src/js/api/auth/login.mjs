@@ -9,6 +9,7 @@ export async function login(profile) {
     const body = JSON.stringify(profile);
 
     const response = await fetch(loginURL, {
+        
         headers: {
             "Content-Type": "application/json"
         },
@@ -17,8 +18,25 @@ export async function login(profile) {
     })
 
     const { accessToken, ...user } = await response.json();
-   
+
     storage.save("token", accessToken);
 
     storage.save("profile", user);
+
+    function incorrectData(){
+        if (response.ok) {
+            alert("You are now logged in");
+            
+            setTimeout(function routeHome() {
+                {
+                   window.location.href = "/profile/index.html";
+               }
+               routeHome();
+           },1000);
+ 
+        } else {
+            alert("Incorrect email or password")
+        }
+    }
+    incorrectData();
 }
