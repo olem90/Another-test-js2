@@ -14,3 +14,4 @@
 
 Thats it. Now the project should be pulled to your code editor.
 
+Link to my Trello board : https://trello.com/b/cM6GSkTq/js2-ca
