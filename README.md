@@ -4,6 +4,7 @@
 ### Description
 
     This is a social app where you can share posts and read posts that other users has published.
+    First you have to register an account and login.
 
 ### Installing
 
