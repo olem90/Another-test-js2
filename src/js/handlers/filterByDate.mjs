@@ -57,3 +57,4 @@ export async function sortPostsByNewest(event) {
         sortByNewestOption.addEventListener('click', sortPostsByNewest);
     };
 
+   

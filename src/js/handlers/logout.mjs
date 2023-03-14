@@ -4,9 +4,9 @@ const logoutButton = document.querySelector(".logoutBtn");
 
 const path = location.pathname;
 
-if ( path === "/feed/index.html" ) {
+if ( path === "/feed/index.html" || path === "/profile/index.html" ) {
     logoutButton.addEventListener('click', logoutUser);
-}
+} 
 
 function logoutUser(){
     const profile = localStorage.profile;

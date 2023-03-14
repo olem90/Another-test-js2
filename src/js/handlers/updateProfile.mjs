@@ -30,13 +30,15 @@ export async function updateProfileListener() {
             profile.email = email;
 
             //send to api
-            updateProfile(profile);
+            if (updateProfile) {
+                updateProfile(profile);
 
-            setTimeout(function routeHome() {
-                {
-                    window.location.replace("/profile/index.html");
-                }
-            },1000);
+                setTimeout(function routeHome() {
+                    {
+                        window.location.replace("/profile/index.html");
+                    }
+                },1000);
+            }        
         })
     }
 };

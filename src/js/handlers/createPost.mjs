@@ -9,8 +9,7 @@ export function createPostListener() {
             const formData = new FormData(form);
             const post = Object.fromEntries(formData.entries());
            
-            //send to api
-            
+            //send to api          
             if (createPost) {
                 createPost(post);
                 setTimeout(function routeHome() {

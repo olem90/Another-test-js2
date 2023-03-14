@@ -35,4 +35,11 @@ async function homePostsTemplate() {
     templates.renderPostTemplates(posts, container);
 };
 
+function isAuthenticated() {
+    if (!localStorage.getItem('token')) {
+        window.location.href = "/profile/login/index.html";
+}};
 
+if (path !== "/profile/login/index.html" && path !== "/profile/register/index.html") {
+    isAuthenticated()
+}

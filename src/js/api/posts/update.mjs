@@ -14,6 +14,7 @@ export async function updatePost(postData) {
     const response = await fetchWithToken( updatePostURL, {
         method,
         body: JSON.stringify(postData)
+        
     })
 
     function updatePostResponse () {

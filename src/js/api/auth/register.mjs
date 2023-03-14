@@ -16,4 +16,20 @@ export async function register(profile) {
     })
 
     const result = await response.json();
+
+    function registerResponse(){
+        if (response.ok) {     
+            alert("You are now registered");
+            
+            setTimeout(function routeHome() {
+                {
+                    window.location.replace("/profile/login/index.html");
+                }              
+           },1000);
+        } else {
+            alert("Something went wrong..");
+        }
+    }
+    registerResponse();
 }
+

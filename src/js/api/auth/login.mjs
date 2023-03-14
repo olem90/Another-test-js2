@@ -30,13 +30,13 @@ export async function login(profile) {
             setTimeout(function routeHome() {
                 {
                     window.location.replace("/feed/index.html");
-               }
-               
+                }              
            },1000);
- 
         } else {
-            alert("Incorrect email or password")
+            alert("Incorrect email or password");
         }
     }
     loginData();
-}
+
+    
+};

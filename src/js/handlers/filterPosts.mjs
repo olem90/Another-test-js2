@@ -5,8 +5,6 @@ const path = location.pathname;
 const searchBar = document.querySelector("#searchPosts");
 const homePostsContainer = document.querySelector("#homePosts")
 
-
-
 export async function filterPosts(event) {
     event.preventDefault();
     let filterValue = event.target.value.toLowerCase();
@@ -22,7 +20,6 @@ export async function filterPosts(event) {
     templates.renderPostTemplates( filteredPosts, homePostsContainer )     
     };
     
-
     if( path === "/feed/index.html") {
         searchBar.addEventListener('keyup', filterPosts);
     };
